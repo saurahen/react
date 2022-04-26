@@ -10,11 +10,8 @@ const MyPosts = () => {
         <div>New Post</div>
       </div>
       <div>
-        <Post />
-        <Post />
-        <Post />
-        <Post />
-        <Post />
+        <Post message='Hello World!!!' />
+        <Post message='PROPSbI LAL KEK CHEBUREK' />
       </div>
     </section>
   );
