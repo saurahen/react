@@ -1,33 +1,36 @@
 import React from 'react';
 import s from './Navbar.module.css';
+import { NavLink } from 'react-router-dom';
+// Активная страница написана золотым цветом
+const activeGold = ({ isActive }) => (isActive ? s.activeLink : s.item);
 
 const Navbar = () => {
   return (
     <nav className={s.nav}>
       <div>
-        <a href='/profile' className={s.item}>
+        <NavLink to='/profile' className={activeGold}>
           Profile
-        </a>
+        </NavLink>
       </div>
       <div>
-        <a href='/dialogs' className={s.item}>
+        <NavLink to='/dialogs' className={activeGold}>
           Messages
-        </a>
+        </NavLink>
       </div>
       <div>
-        <a href='/news' className={s.item}>
+        <NavLink to='/news' className={activeGold}>
           News
-        </a>
+        </NavLink>
       </div>
       <div>
-        <a href='/music' className={s.item}>
+        <NavLink to='/music' className={activeGold}>
           Music
-        </a>
+        </NavLink>
       </div>
       <div>
-        <a href='/settings' className={s.item}>
+        <NavLink to='/settings' className={activeGold}>
           Settings
-        </a>
+        </NavLink>
       </div>
     </nav>
   );
